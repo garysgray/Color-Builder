@@ -1,5 +1,6 @@
 var numOfColorsInGroup= 0;
 var numOfColorsInList = 6;
+var colorsArray = [];
 
 function showNumOfColors()
 {
@@ -10,17 +11,20 @@ function showNumOfColors()
 $( function() 
 {
     showNumOfColors();
-    
-    $(".draggable").draggable({revert: "invalid"}); 
-    
+    $(".draggable").draggable({revert: "invalid"});   
     $(".group-obj").droppable(
     {  drop: function(event, ui) 
-        {       
+        {   
+            if(colorsArray.indexOf(ui.draggable) == -1)
+            {
+                colorsArray.push(ui.draggable);
+                numOfColorsInGroup += 1;
+                numOfColorsInList -= 1;
+                showNumOfColors();
+            }
            var dropped = ui.draggable;
            var droppedOn = $(this);
-           numOfColorsInGroup += 1;
-           numOfColorsInList -= 1;
-           showNumOfColors();
+           
            $(dropped).detach().css({top: 0,left: 0}).appendTo(droppedOn);
         }
     });    
