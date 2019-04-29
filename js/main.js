@@ -1,6 +1,15 @@
+var colorsArray = [];
 var numOfColorsInGroup= 0;
 var numOfColorsInList = 6;
-var colorsArray = [];
+
+var colrDict = {
+    "blue": 65535,
+    "yellow": 16776960,
+    "green": 2263842,
+    "orange": 16747520,
+    "purple": 12211667,
+    "red": 11546720,
+};
 
 function showNumOfColors()
 {
@@ -14,19 +23,35 @@ $( function()
     $(".draggable").draggable({revert: "invalid"});   
     $(".group-obj").droppable(
     {  drop: function(event, ui) 
-        {   
-            if(colorsArray.indexOf(ui.draggable) == -1)
+        {    
+            
+            var target_info = $(ui.draggable.context).attr("id");
+            
+            console.log("the color is: "+target_info);
+            
+            if(colorsArray.indexOf(target_info) == -1)
             {
-                colorsArray.push(ui.draggable);
+                colorsArray.push(target_info);
                 numOfColorsInGroup += 1;
                 numOfColorsInList -= 1;
                 showNumOfColors();
+                
+                console.log("color value is: "+colrDict[target_info]);
             }
+            else
+            {
+                temp_value = colorsArray.indexOf(target_info);
+                colorsArray.splice(temp_value,1);            
+                colorsArray.push(target_info);               
+            }                       
            var dropped = ui.draggable;
            var droppedOn = $(this);
-           
            $(dropped).detach().css({top: 0,left: 0}).appendTo(droppedOn);
+           
+           console.log(colorsArray);
         }
     });    
 });
 
+
+//console.dir(ui.draggable) good trick to get info

@@ -72,22 +72,22 @@
     text-align:center;
   }
   
-  .blue{
+  #blue{
     background-color: #00ffff;
   }
-  .yellow{
+  #yellow{
     background-color: #ffff00;
   }
-  .green{
+  #green{
     background-color: #228b22;
   }
-  .orange{
+  #orange{
     background-color: #ff8c00;
   }
-  .purple{
+  #purple{
     background-color: #ba55d3;
   }
-  .red{
+  #red{
     background-color: #b03060;
   }
   
