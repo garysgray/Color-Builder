@@ -2,9 +2,9 @@
     cursor:grab;
   }
   
-.title{
+#title{
     display:flex;
-    background-color:yellow;
+    background-color:#e3d7d4;
     margin:10px;
     border-radius: 7px;
     border-style: solid;
@@ -21,7 +21,7 @@
     text-align: center;  
   }
   
-  .page-box{
+  #page-box{
     background-color:#666;
     margin:10px;
     padding:10px;
@@ -29,9 +29,36 @@
     display:flex;  
   }
   
-  .page-box>div{
+  #page-box>div{
     width:50%;
   }
+  
+  #current-color-list{
+    font-size:25;
+  }
+   
+
+  .info-box{
+    background-color:#666;
+    margin:10px;
+    padding:10px;
+    border-radius: 7px; 
+    display:flex;
+    text-align:center;
+    
+  }
+  
+  .info-box>div{
+    width:100%;
+  }
+  
+  .info-section{
+    background-color:#e3d7d4;
+    border-radius: 10px;
+    padding:5px; 
+    margin:20px;
+  }
+  
   
   #color-in-group{
     color:white;
@@ -43,21 +70,21 @@
     
   }
   
-  .color-section{
+  #color-section{
     background-color:#2A2A2A;
     border-radius: 10px;
     padding:5px; 
     margin:20px;
   }
   
-  .group-section{
+  #group-section{
     background-color:#2A2A2A;
     border-radius: 10px;
     padding:5px;
     margin:20px; 
   }
   
-  .group-obj{
+  #group-obj{
     margin:10px;
     padding:10px;
     height:250px;

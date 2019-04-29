@@ -15,13 +15,14 @@ function showNumOfColors()
 {
     document.getElementById("color-in-list").innerHTML = "Num of Colors:  " +numOfColorsInList; 
     document.getElementById("color-in-group").innerHTML = "Num of Colors:  "+numOfColorsInGroup;
+    document.getElementById("current-color-list").innerHTML = "Colors in List: "+colorsArray;
 }
 
 $( function() 
 {
     showNumOfColors();
     $(".draggable").draggable({revert: "invalid"});   
-    $(".group-obj").droppable(
+    $("#group-obj").droppable(
     {  drop: function(event, ui) 
         {    
             
@@ -42,7 +43,8 @@ $( function()
             {
                 temp_value = colorsArray.indexOf(target_info);
                 colorsArray.splice(temp_value,1);            
-                colorsArray.push(target_info);               
+                colorsArray.push(target_info); 
+                showNumOfColors();                
             }                       
            var dropped = ui.draggable;
            var droppedOn = $(this);
