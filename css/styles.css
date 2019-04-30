@@ -9,7 +9,8 @@
     border-radius: 7px; 
     display:flex;
     text-align:center;
-    color:white;    
+    color:white;
+    
   }
   
   #page-box>div{
@@ -53,24 +54,28 @@
     font-size:25;    
   }
   
-  #color-section{
+  .color-section{
     background-color:#2A2A2A;
     border-radius: 10px;
     padding:5px; 
     margin:20px;
+    display:flex;
+    justify-content: center;
+    padding-bottom:4%;
   }
-  
-  #group-section{
-    background-color:#2A2A2A;
-    border-radius: 10px;
-    padding:5px;
-    margin:20px; 
-  }
-  
-  #group-obj{
+  .color-stripe{
+    background-color:#e3d7d4;
     margin:10px;
     padding:10px;
+    border-radius: 7px;
     height:250px;
+    
+  }
+   
+  #group-obj{
+    
+    height:250px;
+    
   }
   
   .color-type{
