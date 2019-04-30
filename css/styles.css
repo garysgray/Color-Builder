@@ -2,31 +2,14 @@
     cursor:grab;
   }
   
-#title{
-    display:flex;
-    background-color:#e3d7d4;
-    margin:10px;
-    border-radius: 7px;
-    border-style: solid;
-    border-color:black;    
-  }
-  
-  #pre{
-    width:50%;
-    text-align: center;  
-  }
-  
-  #group{
-    width:50%;
-    text-align: center;  
-  }
-  
   #page-box{
     background-color:#666;
     margin:10px;
     padding:10px;
     border-radius: 7px; 
-    display:flex;  
+    display:flex;
+    text-align:center;
+    color:white;    
   }
   
   #page-box>div{
@@ -34,18 +17,19 @@
   }
   
   #current-color-list{
-    font-size:25;
+    font-size:20;
+    padding:2px; 
+    margin:5px;
+    margin-bottom:1%;
   }
    
-
   .info-box{
     background-color:#666;
-    margin:10px;
-    padding:10px;
+    margin:5px;
+    padding:5px;
     border-radius: 7px; 
     display:flex;
-    text-align:center;
-    
+    text-align:center;   
   }
   
   .info-box>div{
@@ -55,19 +39,18 @@
   .info-section{
     background-color:#e3d7d4;
     border-radius: 10px;
-    padding:5px; 
-    margin:20px;
+    padding:2px; 
+    margin:5px;
+    font-size:20;
   }
-  
-  
+    
   #color-in-group{
     color:white;
-    text-align:center;
+    font-size:25;
   }
   #color-in-list{
-    color:white;
-    text-align:center;
-    
+    color:white;   
+    font-size:25;    
   }
   
   #color-section{
@@ -97,24 +80,25 @@
     border-radius: 10px;
     width: 130px;
     text-align:center;
+    color:black;
   }
   
-  #blue{
+  #Blue{
     background-color: #00ffff;
   }
-  #yellow{
+  #Yellow{
     background-color: #ffff00;
   }
-  #green{
+  #Green{
     background-color: #228b22;
   }
-  #orange{
+  #Orange{
     background-color: #ff8c00;
   }
-  #purple{
+  #Purple{
     background-color: #ba55d3;
   }
-  #red{
+  #Red{
     background-color: #b03060;
   }
   

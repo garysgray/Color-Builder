@@ -3,19 +3,33 @@ var numOfColorsInGroup= 0;
 var numOfColorsInList = 6;
 
 var colrDict = {
-    "blue": 65535,
-    "yellow": 16776960,
-    "green": 2263842,
-    "orange": 16747520,
-    "purple": 12211667,
-    "red": 11546720,
+    "Blue"  : "00FFFF",
+    "Yellow": "FFFF00",
+    "Green" : "228B22",
+    "Orange": "FF8C00",
+    "Purple": "BA55D3",
+    "Red"   : "B03060",
 };
 
 function showNumOfColors()
 {
     document.getElementById("color-in-list").innerHTML = "Num of Colors:  " +numOfColorsInList; 
     document.getElementById("color-in-group").innerHTML = "Num of Colors:  "+numOfColorsInGroup;
-    document.getElementById("current-color-list").innerHTML = "Colors in List: "+colorsArray;
+    document.getElementById("current-color-list").innerHTML = getColorString();
+}
+
+function getColorString()
+{
+    var colorString = "";  
+    for(var i in colorsArray)
+    {
+        colorString += colorsArray[i]+"="+colrDict[colorsArray[i]];
+        if(i != colorsArray.length-1)
+        {
+            colorString+=", ";
+        }
+    }
+    return colorString;
 }
 
 $( function() 
@@ -24,20 +38,14 @@ $( function()
     $(".draggable").draggable({revert: "invalid"});   
     $("#group-obj").droppable(
     {  drop: function(event, ui) 
-        {    
-            
+        {               
             var target_info = $(ui.draggable.context).attr("id");
-            
-            console.log("the color is: "+target_info);
-            
             if(colorsArray.indexOf(target_info) == -1)
             {
                 colorsArray.push(target_info);
                 numOfColorsInGroup += 1;
                 numOfColorsInList -= 1;
                 showNumOfColors();
-                
-                console.log("color value is: "+colrDict[target_info]);
             }
             else
             {
@@ -49,8 +57,6 @@ $( function()
            var dropped = ui.draggable;
            var droppedOn = $(this);
            $(dropped).detach().css({top: 0,left: 0}).appendTo(droppedOn);
-           
-           console.log(colorsArray);
         }
     });    
 });
