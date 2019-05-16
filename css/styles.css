@@ -9,8 +9,7 @@
     border-radius: 7px; 
     display:flex;
     text-align:center;
-    color:white;
-    
+    color:white;    
   }
   
   #page-box>div{
@@ -19,22 +18,21 @@
   
   #current-color-list{
     font-size:20;
-    padding:2px; 
+    padding:0px; 
     margin:5px;
-    margin-bottom:1%;
+    margin-bottom:3px;
+    font-weight:bold;
   }
    
   .info-box{
     background-color:#666;
     margin:5px;
     padding:5px;
-    border-radius: 7px; 
-    display:flex;
-    text-align:center;   
+    border-radius: 7px;      
   }
   
   .info-box>div{
-    width:100%;
+    width:auto%;    
   }
   
   .info-section{
@@ -43,6 +41,9 @@
     padding:2px; 
     margin:5px;
     font-size:20;
+    display:flex;
+    align-items: center;
+    justify-content: center;    
   }
     
   #color-in-group{
@@ -63,25 +64,26 @@
     justify-content: center;
     padding-bottom:4%;
   }
+  
   .color-stripe{
     background-color:#e3d7d4;
     margin:10px;
     padding:10px;
     border-radius: 7px;
     height:250px;
-    
+    width:150px;   
   }
    
-  #group-obj{
-    
-    height:250px;
-    
+  #group-obj{    
+    height:250px;   
   }
   
   .color-type{
-    margin:10px;
+    margin:5px;
     padding:5px;
-    border: 1px solid #666;
+    padding-top:7px;
+    padding-bottom:7px;
+    border: 2px solid #666;
     border-radius: 10px;
     width: 130px;
     text-align:center;
