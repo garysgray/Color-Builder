@@ -8,5 +8,5 @@ I messed around in JSFiddle, and then eventually transfered it over to my own se
 
 draggable ui on mobile is possible due to jQuery UI Touch Punch which can be found here http://touchpunch.furf.com/
 
-check out code in fiddle here https://jsfiddle.net/uggr/s3qy4tf9/ 
+check out code in fiddle here https://jsfiddle.net/garysgray/uyo0pr1c/ 
 or here on demo site http://garysgameapps.orgfree.com/Draggable/
